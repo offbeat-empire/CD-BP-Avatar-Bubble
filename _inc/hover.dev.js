@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 
 		jQuery('body').append(container);
 
-        jQuery('.avatar').live('mouseover', function() {
+        jQuery('.avatar').on('mouseover', function() {
 
 			// get user or group ID and the type itself
             var elem_var = String(jQuery(this).attr('rel')).split('_');
@@ -62,11 +62,11 @@ jQuery(document).ready(function($) {
              }, showDelay ));
 
 
-        }).live('mouseout', function() {
+        }).on('mouseout', function() {
             clearTimeout($.data(this, 'timer'));
         });
 
-        jQuery('.avatar').live('mouseout', function() {
+        jQuery('.avatar').on('mouseout', function() {
             if (hideTimer)
                 clearTimeout(hideTimer);
             hideTimer = setTimeout(function() {

@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
 
         jQuery('body').append(container);
 
-        jQuery('.avatar').live('click', function(e) {
+        jQuery('.avatar').on('click', function(e) {
 
             e.preventDefault();
             
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
   
         });
 
-        jQuery('.avatar').live('mouseout', function() {
+        jQuery('.avatar').on('mouseout', function() {
             if (hideTimer) clearTimeout(hideTimer);
             hideTimer = setTimeout(function() { container.css('display', 'none'); }, hideDelay);
         });

@@ -329,7 +329,7 @@ function cd_ab_get_the_userdata($ID, $cd_ab) {
                     $field_value = bp_unserialize_profile_field ( $field_value );
                 if ( $field_data['type'] == 'datebox' && $field_value != null ){
                     if(strpos($field_value, '-')){
-                        $field_value = bp_format_time( strtotime($field_value), true );
+                        $field_value = bp_format_time( strtotime($field_value) + 86400, true );
                     }else{
                         $field_value = bp_format_time( bp_unserialize_profile_field ( $field_value), true );
                     }
