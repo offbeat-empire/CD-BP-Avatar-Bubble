@@ -327,13 +327,6 @@ function cd_ab_get_the_userdata($ID, $cd_ab) {
             if ( $field_value != null ) {
                 if ( $field_data['type'] == 'multiselectbox' || $field_data['type'] == 'checkbox')
                     $field_value = bp_unserialize_profile_field ( $field_value );
-                if ( $field_data['type'] == 'datebox' && $field_value != null ){
-                    if(strpos($field_value, '-')){
-                        $field_value = bp_format_time( strtotime($field_value) + 86400, true );
-                    }else{
-                        $field_value = bp_format_time( bp_unserialize_profile_field ( $field_value), true );
-                    }
-                }
                 if ( $i != 1 )
                     $class = ' style="padding-top:6px;"';
 

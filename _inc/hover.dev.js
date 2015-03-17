@@ -51,8 +51,8 @@ jQuery(document).ready(function($) {
 
                         // Verify requested person is this person since we could have multiple ajax requests out if the server is taking a while.
                         if (data.indexOf(elemID) > 0) {
-                            var text = jQuery(data).html();
-                            jQuery('div#popupContent').html(text);
+                            var data = String(data).split('|~|');
+                            jQuery('div#popupContent').html(data[1]);
                             window.cd_ab_positionPopupContent(container, pos, width);
                         }
                     }
