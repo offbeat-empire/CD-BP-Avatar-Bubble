@@ -10,9 +10,9 @@ function cd_ab_add_js() {
         return false;
 
      if ( $cd_ab['action'] == 'click') {
-        wp_enqueue_script('CD_AB_JS', WP_PLUGIN_URL . '/cd-bp-avatar-bubble/_inc/click.min.js', array('jquery'),true, 2 );
+        wp_enqueue_script('CD_AB_JS', plugin_dir_path( __FILE__ ) . '_inc/click.min.js', array('jquery'),true, 2 );
     }else{
-        wp_enqueue_script('CD_AB_JS', WP_PLUGIN_URL . '/cd-bp-avatar-bubble/_inc/hover.min.js', array('jquery') ,true);
+        wp_enqueue_script('CD_AB_JS', plugin_dir_path( __FILE__ ) . '_inc/hover.min.js', array('jquery') ,true);
     }
 }
 
