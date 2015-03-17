@@ -41,8 +41,8 @@ function cd_ab_add_css() {
     if ( $cd_ab['access'] == 'admin' && !is_super_admin() )
         return false;
 
-    $url  = WP_PLUGIN_URL . '/cd-bp-avatar-bubble/_inc/css/';
-    $path = WP_PLUGIN_DIR . '/cd-bp-avatar-bubble/_inc/css/';
+    $url  = plugin_dir_url( __FILE__ ) . '_inc/css/';
+    $path = plugin_dir_path( __FILE__ ). '_inc/css/';
 
     switch($cd_ab['color']){
         case 'red':
