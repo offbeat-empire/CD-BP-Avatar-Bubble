@@ -10,7 +10,7 @@ Network: true
 */
 
 define ('CD_AB_VERSION', '2.5.1');
-define ('CD_AB_IMAGE_URI', WP_PLUGIN_URL . '/cd-bp-avatar-bubble/_inc/images');
+define ('CD_AB_IMAGE_URI',  plugin_dir_url( __FILE__ )  . '_inc/images');
 
 register_activation_hook( __FILE__, 'cd_ab_activation');
 register_deactivation_hook( __FILE__, 'cd_ab_deactivation');
