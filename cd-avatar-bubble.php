@@ -43,10 +43,10 @@ function cd_ab_load_textdomain() {
 
 // Load parts of the plugin only on proper places
 if(is_admin()){
-    require ( WP_PLUGIN_DIR . '/cd-bp-avatar-bubble/cd-ab-admin.php');
+    require ( plugin_dir_path( __FILE__ ) . 'cd-ab-admin.php');
 }
 if(!is_admin()){
-    require ( WP_PLUGIN_DIR . '/cd-bp-avatar-bubble/cd-ab-cssjs.php');
+    require ( plugin_dir_path( __FILE__ ) . 'cd-ab-cssjs.php');
 }
 
 /***
